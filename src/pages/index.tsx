@@ -7,14 +7,25 @@ export default function Home() {
         <div className="bg-slate-400 py-20 px-10 flex flex-col space-y-5 min-h-screen">
             <div className="bg-white p-6 rounded-3xl shadow-xl">
                 <span className="font-semibold text-3xl">Select Item</span>
-                <div className="flex justify-between my-2">
-                    <span className="text-gray-500">Gray chair</span>
-                    <span className="font-semibold">$19</span>
-                </div>
-                <div className="flex justify-between">
-                    <span className="text-gray-500">Gray chair</span>
-                    <span className="font-semibold">$19</span>
-                </div>
+                <ul>
+                    {[1, 2, 3, 4, 5].map((i) => {
+                        return (
+                            <div key={i} className="flex justify-between my-2 odd:bg-blue-50 last:bg-blue-50">
+                                <span className="text-gray-500">Gray chair</span>
+                                <span className="font-semibold">$19</span>
+                            </div>
+                        );
+                    })}
+                </ul>
+                <ul>
+                    {["A", "B", "C", ""].map((c, i) => {
+                        return (
+                            <div key={i} className=" bg-red-50 empty:hidden">
+                                {c}
+                            </div>
+                        );
+                    })}
+                </ul>
                 <div className="flex justify-between mt-2 pt-2 border-t-2 border-dashed">
                     <span>Total</span>
                     <span className="font-semibold">$38</span>
@@ -23,7 +34,7 @@ export default function Home() {
                     Checkout
                 </button>
             </div>
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden group">
                 <div className="bg-blue-500 p-6 pb-14">
                     <span className="text-white text-2xl">Profile</span>
                 </div>
@@ -33,7 +44,7 @@ export default function Home() {
                             <span className="text-am text-gray-500">Orders</span>
                             <span className="font-medium">340</span>
                         </div>
-                        <div className="h-24 w-24 bg-red-400 rounded-full" />
+                        <div className="h-24 w-24 bg-zinc-400 rounded-full group-hover:bg-red-300 transition-colors" />
                         <div className="flex flex-col items-center">
                             <span className="text-am text-gray-500">Spent</span>
                             <span className="font-medium">$340</span>
@@ -45,7 +56,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-white p-6 rounded-3xl shadow-xl">
+            <div className="bg-white p-6 rounded-3xl shadow-xl ">
                 <div className="flex mb-5 justify-between items-center">
                     <span>⬅️</span>
                     <div className="space-x-3">
@@ -58,10 +69,10 @@ export default function Home() {
                     <span className="font-medium text-xl">Swoon Lounge</span>
                     <span className="text-xs text-gray-500">Chair</span>
                     <div className="mt-3 mb-5 flex justify-between items-center">
-                        <div className="space-x-2">
-                            <button className="w-5 h-5 rounded-full bg-yellow-500" />
-                            <button className="w-5 h-5 rounded-full bg-indigo-500" />
-                            <button className="w-5 h-5 rounded-full bg-teal-500" />
+                        <div className="space-x-3">
+                            <button className="w-5 h-5 rounded-full bg-yellow-500 focus:ring-2 ring-offset-2 ring-yellow-500 transition" />
+                            <button className="w-5 h-5 rounded-full bg-indigo-500 focus:ring-2 ring-offset-2 ring-indigo-500 transition" />
+                            <button className="w-5 h-5 rounded-full bg-teal-500 focus:ring-2 ring-offset-2 ring-teal-500 transition" />
                         </div>
                         <div className="flex items-center space-x-5">
                             <button className="p-1.5 rounded-lg bg-blue-200 flex justify-center items-center aspect-square w-8 text-xl text-gray-500">-</button>
