@@ -11,6 +11,6 @@ const config: Config = {
         },
     },
     darkMode: "media", // class: class로 할 경우 최상위 element에 .dark를 추가해주면 dark 모드가 실행된다.
-    plugins: [],
+    plugins: [require("@tailwindcss/forms")],
 };
 export default config;
