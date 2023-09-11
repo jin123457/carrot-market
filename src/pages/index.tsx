@@ -80,7 +80,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between items-center">
                         <span className="font-medium text-2xl">$450</span>
-                        <button className="bg-blue-500 py-2 px-8 text-center text-xs text-white rounded-lg">Add to cart</button>
+                        <button className="bg-[#f00] py-2 px-8 text-center text-xs text-white rounded-lg">Add to cart</button>
                     </div>
                 </div>
             </div>
