@@ -3,7 +3,7 @@ import Layout from "../../../components/layout";
 const CommunityPostDetail = () => {
     return (
         <Layout title="oo님의 커뮤니티 글" hasTabBar canGoBack>
-            <div className="pt-10">
+            <div className="pt-5">
                 <span className="inline-flex my-3 ml-4 items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">동네질문</span>
                 <div className="flex mb-3 px-4 cursor-pointer pb-3  border-b items-center space-x-3">
                     <div className="w-10 h-10 rounded-full bg-slate-300" />

@@ -9,7 +9,7 @@ export default function Home() {
         <Layout title="홈" hasTabBar>
             <div className="flex flex-col space-y-5 py-10">
                 {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-                    <Link href={`/items/${i}`} key={i} className="flex border-b last-of-type:border-b-0 pb-4 cursor-pointer justify-between px-4">
+                    <Link href={`/items/${i}`} key={i} className="flex border-b last:border-b-0 pb-4 cursor-pointer justify-between px-4">
                         <div className="flex space-x-4">
                             <div className="w-20 h-20 bg-gray-400 rounded-md" />
                             <div className="pt-2 flex flex-col">
@@ -44,15 +44,15 @@ export default function Home() {
                         </div>
                     </Link>
                 ))}
-                <Link
-                    href="/items/upload"
-                    className="fixed hover:bg-orange-500 transition-colors cursor-pointer bottom-24 right-5 bg-orange-400 rounded-full p-4 shadow-xl text-white"
-                >
-                    <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                </Link>
             </div>
+            <Link
+                href="/items/upload"
+                className="fixed hover:bg-orange-500 transition-colors cursor-pointer bottom-24 right-5 bg-orange-400 rounded-full p-4 shadow-xl text-white"
+            >
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+            </Link>
         </Layout>
     );
 }

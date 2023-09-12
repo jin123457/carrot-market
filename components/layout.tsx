@@ -16,7 +16,7 @@ const Layout = ({ title, canGoBack, hasTabBar, children }: LayoutProps) => {
     };
     return (
         <div>
-            <div className="bg-white w-full text-lg font-medium py-3 fixed text-gray-800 border-b top-0 justify-center flex items-center">
+            <div className="bg-white w-full max-w-lg mx-auto text-lg font-medium py-3 fixed text-gray-800 border-b top-0 justify-center flex items-center">
                 {canGoBack ? (
                     <button className="absolute left-4" onClick={onGoToBack}>
                         <svg
@@ -36,7 +36,7 @@ const Layout = ({ title, canGoBack, hasTabBar, children }: LayoutProps) => {
             </div>
             <div className={cls("pt-10", hasTabBar ? "pb-10" : "")}>{children}</div>
             {hasTabBar ? (
-                <nav className="bg-white text-gray-800 border-t fixed bottom-0 px-10 pb-3 pt-3 flex justify-between items-center max-w-xl w-full">
+                <nav className="bg-white text-gray-800 border-t fixed bottom-0 px-10 pb-3 pt-3 flex justify-between items-center w-full max-w-lg mx-auto">
                     <Link href="/" className="flex flex-col items-center space-y-2">
                         <svg
                             className="w-6 h-6"
