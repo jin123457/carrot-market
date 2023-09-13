@@ -1,4 +1,5 @@
 import Layout from "../../../components/layout";
+import Message from "../../../components/message";
 
 const ChatDetail = () => {
     return (
@@ -7,18 +8,9 @@ const ChatDetail = () => {
                 <div className="pb-5">
                     {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
                         <div key={i} className="flex flex-col space-y-2 mb-2 last:mb-0">
-                            <div className="flex items-start space-x-2">
-                                <div className="w-8 h-8 rounded-full bg-slate-400" />
-                                <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">Hi how much are you selling them for?</div>
-                            </div>
-                            <div className="flex items-start space-x-2 flex-row-reverse space-x-reverse">
-                                <div className="w-8 h-8 rounded-full bg-slate-400" />
-                                <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">I want ￦20,000</div>
-                            </div>
-                            <div className="flex items-start space-x-2">
-                                <div className="w-8 h-8 rounded-full bg-slate-400" />
-                                <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-300 rounded-md">미쳤어</div>
-                            </div>
+                            <Message text="Hi how much are you selling them for?" />
+                            <Message text="I want ￦20,000" messageRe />
+                            <Message text="미쳤어" />
                         </div>
                     ))}
                 </div>
