@@ -27,6 +27,7 @@ const UseMustation = (url: string): IUseMutationResult => {
             .catch((error) => setMutationState((prev) => ({ ...prev, error })))
             .finally(() => setMutationState((prev) => ({ ...prev, loading: false })));
     }
+
     return [mutation, { ...mutationState }];
 };
 
