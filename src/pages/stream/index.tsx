@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Layout from "../../../components/layout";
-import FixedButton from "../../../components/fixedButton";
+import Layout from "@components/layout";
+import FixedButton from "@components/fixedButton";
 
 const Live = () => {
     return (

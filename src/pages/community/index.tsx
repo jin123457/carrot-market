@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Layout from "../../../components/layout";
-import CommunityList from "../../../components/communityList";
-import FixedButton from "../../../components/fixedButton";
+import Layout from "@components/layout";
+import CommunityList from "@components/communityList";
+import FixedButton from "@components/fixedButton";
 
 const Community = () => {
     return (

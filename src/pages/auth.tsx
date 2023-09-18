@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { cls } from "../../libs/client/utils";
-import Layout from "../../components/layout";
-import Input from "../../components/input";
+import { cls } from "@libs/client/utils";
+import Layout from "@components/layout";
+import Input from "@components/input";
 import { useForm } from "react-hook-form";
-import UseMustation from "../../libs/client/useMutation";
-import Button from "../../components/button";
+import UseMustation from "@libs/client/useMutation";
+import Button from "@components/button";
 
 interface ILoginForm {
     email?: string;

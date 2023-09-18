@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import Button from "../../../components/button";
-import Layout from "../../../components/layout";
-import Input from "../../../components/input";
+import Button from "@components/button";
+import Layout from "@components/layout";
+import Input from "@components/input";
 
 const Edit = () => {
     const { register } = useForm();
