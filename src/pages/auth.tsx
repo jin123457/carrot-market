@@ -27,7 +27,7 @@ export default function Enter() {
         if (loading) return;
         auth(data);
     };
-    console.log(auth, { loading, data, error });
+    //console.log(auth, { loading, data, error });
     return (
         <Layout title="로그인" hasTabBar>
             <div className="mt-16">
