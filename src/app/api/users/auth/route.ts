@@ -32,13 +32,13 @@ export const POST = async (req: Request) => {
             },
         });
         if (phone) {
-            await twilioClient.messages.create({
-                messagingServiceSid: process.env.TWILIO_MESSAGE_SID,
-                to: process.env.MY_PHONE_NUMBER!,
-                body: `login suscess payload : ${payload}`,
-            });
+            // await twilioClient.messages.create({
+            //     messagingServiceSid: process.env.TWILIO_MESSAGE_SID,
+            //     to: process.env.MY_PHONE_NUMBER!,
+            //     body: `login suscess payload : ${payload}`,
+            // });
         } else if (email) {
-            sendEmail(email, payload);
+            // sendEmail(email, payload);
         }
         return NextResponse.json({ ok: true });
     } catch (err) {
