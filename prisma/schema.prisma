@@ -16,7 +16,7 @@ model User {
   name      String
   createAt  DateTime @default(now())
   updatedAt DateTime @updatedAt
-  phone     BigInt?     @unique
+  phone     String?     @unique
   email     String?  @unique
   avatar    String?
   Token     Token[]

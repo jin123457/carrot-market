@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cls } from "@libs/client/utils";
 import Layout from "@components/layout";
 import Input from "@components/input";
 import { useForm } from "react-hook-form";
 import UseMustation from "@libs/client/useMutation";
 import Button from "@components/button";
+import { useRouter } from "next/navigation";
 
 interface ILoginForm {
     email?: string;
@@ -40,6 +41,11 @@ export default function Enter() {
         if (tokenLoading) return;
         confirmToken(tokenData);
     };
+    const router = useRouter();
+    useEffect(() => {
+        console.log(tokenData);
+        if (tokenData?.ok) router.push("/");
+    }, [tokenData, router]);
     return (
         <Layout title="로그인" hasTabBar>
             <div className="mt-16">

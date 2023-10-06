@@ -13,7 +13,7 @@ export const POST = async (req: Request) => {
     try {
         const res = await req.json();
         const { phone, email } = res;
-        const user = phone ? { phone: +phone } : { email };
+        const user = phone ? { phone: phone } : { email };
         const payload = Math.floor(100000 + Math.random() * 900000) + "";
         const token = await client.token.create({
             data: {

@@ -1,13 +1,25 @@
 import client from "@libs/server/client";
 import { NextResponse } from "next/server";
 
+import { submitCookieToStorageServerAction } from "@libs/server/serverActions";
 export const POST = async (req: Request) => {
-    try {
-        const res = await req.json();
-        const { token } = res;
-        console.log(token);
-        return NextResponse.json({ token: token });
-    } catch (err) {
-        return NextResponse.json({ ok: false });
-    }
+    const { token } = await req.json();
+
+    const foundToken = await client.token.findUnique({
+        where: {
+            payload: token,
+        },
+    });
+
+    if (!foundToken) return NextResponse.json({ status: 404 });
+
+    await submitCookieToStorageServerAction(foundToken.userId);
+
+    await client.token.deleteMany({
+        where: {
+            userId: foundToken.userId,
+        },
+    });
+
+    return NextResponse.json({ ok: true }, { status: 200 });
 };
